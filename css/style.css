@@ -510,7 +510,9 @@ h1 {
 
 @media (max-width: 800px) {
   .space {
-    height: 80vh;
+    height: 60vh;
+    background-size: bottom;
+    background-position: right;
   }
   .space-text {
     padding-left: 40px;
