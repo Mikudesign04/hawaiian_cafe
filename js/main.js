@@ -95,3 +95,14 @@ $(function () {
   // ページを開いた時にも判定
   $(window).trigger("scroll");
 });
+
+$('a[href^="#"]').on("click", function (e) {
+  e.preventDefault();
+
+  const speed = 1000;
+  const href = $(this).attr("href");
+  const target = $(href === "#" || href === "" ? "html" : href);
+  const position = target.offset().top;
+
+  $("html, body").animate({ scrollTop: position }, speed, "swing");
+});
