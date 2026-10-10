@@ -99,7 +99,7 @@ a .btn .fade-up {
   padding: 10px;
 }
 #navi a {
-  color: #f7f3e8;
+  color: #fff;
   font-size: 30px;
 }
 
@@ -116,6 +116,7 @@ header {
   align-items: center;
   height: 100px;
   width: 100%;
+  z-index: 200;
 }
 header .header-logo {
   width: 100px;
@@ -154,53 +155,60 @@ header.scrolled .instagram-icon {
   border-radius: 50%;
   position: relative;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .hamburger span {
   position: absolute;
   left: 50%;
-  right: 0;
+  top: 50%;
   width: 30px;
   height: 3px;
   background-color: #fff;
-  transform: translateX(-50%);
-  transition: all 0.5s;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s;
   z-index: 5;
 }
 
 .hamburger span:nth-child(1) {
-  top: 20px;
+  transform: translate(-50%, calc(-50% - 5px));
 }
 
 .hamburger span:nth-child(2) {
-  top: 40px;
+  transform: translate(-50%, calc(-50% + 5px));
 }
 
 .open .hamburger {
   background-color: none;
   border: none;
+  z-index: 220;
 }
 
 .open .header-nav {
-  z-index: 100;
+  position: relative;
+  z-index: 210;
 }
 
 .open .header-logo {
-  z-index: 100;
+  position: relative;
+  z-index: 210;
+}
+.open .header-logo a {
+  color: #f7f3e8;
 }
 
 .open .hamburger span:nth-child(1) {
-  top: 47%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
   background: #fff;
-  transform: rotate(45deg);
-  z-index: 100;
 }
 
 .open .hamburger span:nth-child(2) {
-  top: 47%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
   background: #fff;
-  transform: rotate(-45deg);
-  z-index: 100;
 }
 
 .open #navi {
@@ -208,10 +216,22 @@ header.scrolled .instagram-icon {
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 80;
+  z-index: 150;
   padding-top: 70px;
   padding-left: 150px;
   background-color: rgb(120, 184, 197.1);
+  color: #f7f3e8;
+}
+.open #navi a {
+  color: #f7f3e8;
+}
+
+header.open.scrolled .header-logo a {
+  color: #fff;
+}
+
+header.open.scrolled .instagram-icon {
+  filter: brightness(0) invert(1);
 }
 
 video {
@@ -231,6 +251,9 @@ video {
   color: #f7f3e8;
   font-size: 18px;
   writing-mode: vertical-rl;
+}
+.sub-text p {
+  color: #f7f3e8;
 }
 
 .sub-text::after {
@@ -341,7 +364,7 @@ h1 {
   }
 }
 .space {
-  background-image: url(../.img/海ヤシの木.png);
+  background-image: url(../img/sea.png);
   background-size: cover;
   background-position: right;
   height: 100vh;
@@ -620,7 +643,7 @@ h1 {
   position: absolute;
   top: 30px;
   left: 400px;
-  z-index: 30;
+  z-index: 5;
 }
 .inner a {
   display: inline-block;
