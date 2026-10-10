@@ -462,7 +462,7 @@ h1 {
   .main-text {
     left: 20px;
     text-align: center;
-    top: 250px;
+    top: 300px;
   }
 }
 .ourstory {
@@ -514,7 +514,7 @@ h1 {
   }
   .space-text {
     padding-left: 40px;
-    padding-top: 40px;
+    padding-top: 80px;
   }
   .sp-br {
     display: inline;
@@ -604,7 +604,7 @@ h1 {
 
 @media (max-width: 800px) {
   .title-sub {
-    padding-left: 40px;
+    padding-left: 20px;
   }
   .menu1 {
     gap: 10px;
