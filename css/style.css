@@ -91,6 +91,124 @@ a .btn .fade-up {
     font-size: 16px;
   }
 }
+/* =========================
+   スマホ対応
+========================= */
+@media screen and (max-width: 767px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  .slide-photos img {
+    height: 200px;
+  }
+  body {
+    margin: 0;
+    overflow-x: clip;
+  }
+  .btn {
+    margin-bottom: 30px;
+  }
+  /* ヘッダー */
+  header {
+    width: 100%;
+    height: 80px;
+    padding: 12px;
+  }
+  header .header-logo {
+    width: auto;
+    flex-shrink: 0;
+  }
+  header .header-logo a {
+    font-size: 30px;
+  }
+  .header-nav {
+    align-items: center;
+    gap: 12px;
+  }
+  .header-nav img {
+    display: block;
+    width: 32px;
+  }
+  .hamburger {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+  }
+  .hamburger span {
+    width: 24px;
+  }
+  .hamburger span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, calc(-50% - 5px));
+  }
+  .hamburger span:nth-child(2) {
+    top: 50%;
+    transform: translate(-50%, calc(-50% + 5px));
+  }
+  /* メインビジュアル */
+  .mainvisual {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    overflow: hidden;
+  }
+  .main-video {
+    width: 100%;
+    height: 100%;
+  }
+  .main-video video {
+    display: block;
+    width: 100%;
+    height: 100svh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main-text {
+    width: 100%;
+    padding: 0 24px;
+  }
+  .hero-title {
+    font-size: clamp(27px, 7vw, 36px);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+  .hero-sub {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .hero-btn {
+    font-size: 14px;
+  }
+  .hero-btn .sub-text {
+    top: auto;
+    bottom: 100px;
+    left: 16px;
+    font-size: 13px;
+  }
+  .hero-btn .sub-text::after {
+    height: 60px;
+    bottom: -75px;
+  }
+  .hero-btn {
+    /* OUR STORY */
+  }
+  .hero-btn .our-text {
+    font-size: 12px;
+    margin-inline: 10px;
+  }
+  .hero-btn {
+    /* セクション全体の横はみ出し対策 */
+  }
+  .hero-btn section {
+    max-width: 100%;
+  }
+  .hero-btn img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 #navi {
   position: fixed;
   left: -600px;
@@ -338,6 +456,7 @@ h1 {
   .main-text {
     left: 60px;
     text-align: center;
+    top: 100px;
   }
 }
 .ourstory {
@@ -356,7 +475,7 @@ h1 {
 
 @media (max-width: 800px) {
   .ourstory {
-    margin: 0 auto;
+    margin: 0 15px;
     height: auto;
   }
   .ourstory .our-text {
@@ -725,6 +844,7 @@ footer .header-logo a {
     transform: translateX(-50%);
     width: 100%;
     padding: 20px;
+    font-size: 12px;
   }
   .inner a {
     width: 80%;
@@ -740,5 +860,19 @@ footer .header-logo a {
   footer small {
     font-size: 10px;
     white-space: nowrap;
+  }
+}
+@media screen and (max-width: 767px) {
+  .inner {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 20px;
+    font-size: 10px;
+  }
+  .inner a {
+    width: 80%;
+    margin-bottom: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
