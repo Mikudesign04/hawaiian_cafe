@@ -103,7 +103,7 @@ a .btn .fade-up {
   .slide-photos img {
     height: 200px;
   }
-  body {
+  .menu {
     margin: 0;
     overflow-x: clip;
   }
