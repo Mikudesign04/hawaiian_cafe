@@ -201,7 +201,7 @@ a .btn .fade-up {
   .hero-btn {
     /* セクション全体の横はみ出し対策 */
   }
-  .hero-btn section {
+  .hero-btn body {
     max-width: 100%;
   }
   .hero-btn img {
