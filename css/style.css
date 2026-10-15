@@ -156,14 +156,20 @@ a .btn .fade-up {
   .mainvisual {
     position: relative;
     width: 100%;
-    min-height: 100svh;
+    height: 120svh;
     overflow: hidden;
   }
-  .main-video,
+  .main-video {
+    display: block;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
+  }
   video {
     display: block;
     width: 100%;
-    height: 100svh;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center center;
@@ -172,48 +178,53 @@ a .btn .fade-up {
   .main-text {
     width: 100%;
     padding: 0 24px;
-  }
-  .hero-title {
-    font-size: clamp(27px, 7vw, 36px);
-    line-height: 1.4;
-    overflow-wrap: anywhere;
-  }
-  .hero-sub {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  .hero-btn {
-    font-size: 14px;
-  }
-  .hero-btn .sub-text {
-    top: auto;
-    bottom: 100px;
-    left: 16px;
-    font-size: 13px;
-  }
-  .hero-btn .sub-text::after {
-    height: 60px;
-    bottom: -75px;
-  }
-  .hero-btn {
-    /* OUR STORY */
-  }
-  .hero-btn .our-text {
-    font-size: 12px;
-    margin-inline: 10px;
-  }
-  .hero-btn {
-    /* セクション全体の横はみ出し対策 */
-  }
-  .hero-btn html,
-  .hero-btn body {
-    max-width: 100%;
-  }
-  .hero-btn img {
-    max-width: 100%;
-    height: auto;
+    left: 10px;
+    top: 250px;
   }
 }
+.hero-title {
+  font-size: clamp(27px, 7vw, 36px);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.hero-sub {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.hero-btn {
+  font-size: 14px;
+}
+.hero-btn .sub-text {
+  top: auto;
+  bottom: 100px;
+  left: 16px;
+  font-size: 13px;
+}
+.hero-btn .sub-text::after {
+  height: 60px;
+  bottom: -75px;
+}
+.hero-btn {
+  /* OUR STORY */
+}
+.hero-btn .our-text {
+  font-size: 12px;
+  margin-inline: 10px;
+}
+.hero-btn {
+  /* セクション全体の横はみ出し対策 */
+}
+.hero-btn html,
+.hero-btn body {
+  max-width: 100%;
+}
+.hero-btn img {
+  max-width: 100%;
+  height: auto;
+}
+
 #navi {
   position: fixed;
   left: -600px;
@@ -366,18 +377,7 @@ header.open.scrolled .instagram-icon {
   position: relative;
   inset: 0;
   width: 100%;
-  height: 100%;
   overflow: hidden;
-}
-
-.main-video video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center bottom;
-     object-position: center bottom;
 }
 
 .sub-text {
@@ -470,13 +470,6 @@ h1 {
   transform: translateY(0);
 }
 
-@media (max-width: 800px) {
-  .main-text {
-    left: 20px;
-    text-align: center;
-    top: 300px;
-  }
-}
 .ourstory {
   background-color: #f7f3e8;
   height: 100vh;
