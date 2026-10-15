@@ -49,6 +49,11 @@ h3 {
 
 video {
   height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center bottom;
+     object-position: center bottom;
 }
 
 /* =========================
@@ -154,16 +159,15 @@ a .btn .fade-up {
     min-height: 100svh;
     overflow: hidden;
   }
-  .main-video {
-    width: 100%;
-    height: 100%;
-  }
-  .main-video video {
+  .main-video,
+  video {
     display: block;
     width: 100%;
     height: 100svh;
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
   }
   .main-text {
     width: 100%;
@@ -358,14 +362,22 @@ header.open.scrolled .instagram-icon {
     padding-left: 20px;
   }
 }
-video.main-video {
-  height: 100vh;
+.main-video {
+  position: relative;
+  inset: 0;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center bottom;
      object-position: center bottom;
-  position: relative;
 }
 
 .sub-text {
@@ -510,7 +522,7 @@ h1 {
 
 @media (max-width: 800px) {
   .space {
-    height: 60vh;
+    height: 100svh;
     background-size: bottom;
     background-position: right;
   }
