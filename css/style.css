@@ -522,13 +522,13 @@ h1 {
 
 @media (max-width: 800px) {
   .space {
-    height: 50svh;
+    height: 80svh;
     background-size: bottom;
     background-position: right;
   }
   .space-text {
     padding-left: 40px;
-    padding-top: 80px;
+    padding-top: 60px;
   }
   .sp-br {
     display: inline;
