@@ -470,6 +470,13 @@ h1 {
   transform: translateY(0);
 }
 
+@media (max-width: 800px) {
+  .main-text {
+    position: absolute;
+    top: 300px;
+    left: 30px;
+  }
+}
 .ourstory {
   background-color: #f7f3e8;
   height: 100vh;
@@ -515,7 +522,7 @@ h1 {
 
 @media (max-width: 800px) {
   .space {
-    height: 100svh;
+    height: 50svh;
     background-size: bottom;
     background-position: right;
   }
